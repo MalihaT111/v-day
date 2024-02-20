@@ -1,0 +1,15 @@
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://ani.cursors-4u.net/nature/nat-11/nat1040.ani), url(https://ani.cursors-4u.net/nature/nat-11/nat1035.png), auto !important;} /* End https://www.cursors-4u.com */
+#heartCursor {
+    position: fixed;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    background-size: cover;
+    z-index: 9999; /* Ensure it's on top of other elements */
+  }
+  
+  body {
+    cursor: none; /* Hide the default cursor */
+  }
+  
+
+  

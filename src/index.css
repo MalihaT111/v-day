@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+ }
+ body{
+   height: 100vh;
+   background-image: linear-gradient(#d6776a, #dc5858e0);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+ }

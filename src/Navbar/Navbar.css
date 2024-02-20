@@ -1,0 +1,48 @@
+.navbar {
+    background-color: #ff4d6b; /* Valentine's red */
+    background-image: linear-gradient(#f27979, #e78282); /* Gradient */
+    padding: 10px;
+    display: flex;
+}
+
+.navbar-pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0rem 4rem;
+}
+
+.navbar-pages img {
+    width: 5%;
+    padding-right: 1rem;
+}
+
+.navbar-pages p {
+    font-family: "Lobster Two", sans-serif;
+    color: #ffd4d4; 
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    border: 0;
+    text-decoration: none;
+    padding: 1.5rem 2rem;
+    position: relative; /* Relative position for heart icon */
+}
+
+.navbar-pages p:hover {
+    background-color: #f7b8b8; /* Light pink */
+    color: #e51d1d;
+    display: block;
+}
+
+/* Heart icon */
+.navbar-pages p::before {
+    content: "\2665"; /* Heart Unicode */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff4d6b; /* Red heart */
+    font-size: 24px;
+}
