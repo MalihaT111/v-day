@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Quiz.css';
-import { Link } from 'react-router-dom';
+import cry from './cry.gif'
 
 const Quiz = () => {
     const questions = [
@@ -96,17 +96,29 @@ const Quiz = () => {
             {showScore ? (
                 <div className="result-container">
                     <h2>Your Score: {score} out of {questions.length}</h2>
-                    <Link to="/">Back to Home</Link>
-                </div>
+                {score <= 10 ? (
+                    <div>
+                        <p>What is wrong with you.</p>
+                        <img 
+                            src={cry} 
+                            alt="GIF" 
+                            style={{ width: '500px', height: 'auto', cursor: 'pointer', padding: '20px'}} 
+                        /> 
+                    </div>
+                ) : (
+                    <p>GOOD JOB BB</p>
+                )}
+            </div>
             ) : (
                 <div className="question-container">
                     <div className="question-text">{questions[currentQuestion].question}</div>
-                    <div className="options-container">
+                    <div className="options-container" >
                         {questions[currentQuestion].options.map((option, index) => (
                             <button
                                 key={index}
                                 className={`option-button ${selectedOption === option ? 'selected' : ''}`}
                                 onClick={() => handleOptionClick(option)}
+                                
                             >
                                 {option}
                             </button>
