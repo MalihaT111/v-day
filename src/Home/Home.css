@@ -10,21 +10,69 @@
 }
 .question
 {
+    display: block;
+    position: relative;
     font-family: "Lobster Two", sans-serif;
     font-size: 35px;
     font-weight: 400;
 }
-.button
+.yes
 {
-    width: 50px;
-	height: 50px;
-  top:50%;
-  position: fixed;
-	left: 50%;
-	margin-top: -45px;
-	margin-left: -50px;
-	border-radius: 5px;
-	background: none;
-	cursor: pointer;
-	transition: background 0.5s ease;
+    color: #f8c7ce;
+    font-family: "Lobster Two", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 10px 20px; /* Add padding to the buttons */
+    margin: 0 10px; /* Add margin between the buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: width 0.3s ease;
+    display: block;
+    position: relative;
+}
+
+.no
+{
+
+    color: #f8c7ce;
+    font-family: "Lobster Two", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 10px 20px; /* Add padding to the buttons */
+    margin: 0 10px; /* Add margin between the buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.button-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    justify-content: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    
+}
+.noc
+{
+    position: relative;
+    background-color: rgb(198, 44, 44);
+    transition: transform 0.3s ease;
+}
+.yesc
+{
+    position: relative;
+    background-color: rgb(23, 147, 33);
+    transition: transform 0.3s ease;
+}
+.stuff
+{
+    display: block;
+    position: relative;
+}
+.valentine
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Adjust margin as needed */
 }
