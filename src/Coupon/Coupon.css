@@ -1,0 +1,200 @@
+.directions {
+    text-align: center;
+    font-family: "Lobster Two", sans-serif;
+    color: #ffcbcb;
+    font-size: 50px;
+    padding: 20px;
+  }
+  
+  .spin-the-wheel {
+    margin: auto;
+    position: relative;
+    height: 400px;
+    width:  400px;
+    cursor: pointer;
+  }
+  
+  label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+  }
+  
+  input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .wheel {
+    position: relative;
+    height: 400px;
+    width:  400px;
+
+  }
+  
+  .option {
+    font-family: "Lobster Two", sans-serif;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    color: rgb(242, 225, 225);
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .o1 {
+    background-color:#ffa8b2;
+    width: 50%;
+    height: 50%;
+    padding: .5%; /* Adjust padding of options as needed */
+    top: 0;
+    left: 0;
+    border-top-left-radius: 100%;
+  }
+  
+  .o2 {
+    width: 50%;
+    height: 50%;
+    padding: .5%; /* Adjust padding of options as needed */
+    background-color: 	#ffbcd8;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 100%;
+  }
+  
+  .o3 {
+    width: 50%;
+    height: 50%;
+    padding: .5%; /* Adjust padding of options as needed */
+    background-color:#fdae83;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 100%;
+  }
+  
+  .o4 {
+    width: 50%;
+    height: 50%;
+    padding: .5%; /* Adjust padding of options as needed */
+    background-color: #f36d5f;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 100%;
+  }
+  
+  .message {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 25px;
+    position: relative;
+    padding: 20px;
+    background-color: rgb(238, 98, 98);
+    color: rgb(244, 195, 195);
+    text-align: center;
+    box-shadow: 0 0 5px rgb(93, 19, 19);
+    top: 50px;
+    width: 300px;
+    z-index: 5;
+    opacity: 0;
+  }
+  
+  .clicker {
+    position: absolute;
+    z-index: 30;
+    height: 0;
+    width: 0;
+    left: 175px;
+    top: -3px;
+    border-width: 20px 20px 0 20px;
+    transform: scaley(2);
+    transform-origin: 50% 0;
+    border-color: #fcf5f5 transparent transparent transparent;
+    border-style: solid;
+   
+  }
+  
+  :checked ~ .wheel {
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(1665deg);
+    }
+  }
+  
+  :checked ~ .message {
+    animation-name: winner;
+    animation-delay: 2.9s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes winner {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  :checked ~ .clicker {
+    animation-name: Clicker;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+  @keyframes Clicker {
+    0%, 100% {
+      transform:  rotate(0deg) scaley(2);
+    }
+     5%, 10%, 16%, 23%, 31%, 40%, 50%, 61%, 73%, 86% {
+      transform:  rotate(-15deg) scaley(2);
+   
+    }
+    7.5%, 13%, 20.5%, 27%, 35.5%, 45%, 55.5%, 67%, 79.5% {
+      transform:  rotate(-10deg) scaley(2);
+    } 
+  }
+  
+  
+  :checked ~ a {
+    display: block;
+    animation-name: Linkable;
+    animation-delay: 3.1s;
+    animation-fill-mode: both;
+    animation-duration: 0.1s;
+  }
+  
+  @keyframes Linkable {
+    0% {
+      bottom: 100%;
+    }
+    
+    100% {
+      bottom: 0;
+    }
+}
+.img
+{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust this to fit your layout */
+}

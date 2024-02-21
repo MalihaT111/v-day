@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './Quiz.css';
 import cry from './cry.gif'
+import yay from './yay.gif'
 
 const Quiz = () => {
     const questions = [
@@ -17,7 +18,7 @@ const Quiz = () => {
         {
             question: "What’s my least favorite type of music from this list?",
             options: ["kpop", "hip-hop", "rock", "indie"],
-            answers: ["rock"]
+            answers: ["hip-hop"]
         },
         {
             question: "Khan’s or Bobby’s?",
@@ -96,7 +97,7 @@ const Quiz = () => {
             {showScore ? (
                 <div className="result-container">
                     <h2>Your Score: {score} out of {questions.length}</h2>
-                {score <= 10 ? (
+                {score < 10 ? (
                     <div>
                         <p>What is wrong with you.</p>
                         <img 
@@ -106,7 +107,14 @@ const Quiz = () => {
                         /> 
                     </div>
                 ) : (
+                    <div>
                     <p>GOOD JOB BB</p>
+                    <img 
+                    src={yay} 
+                    alt="GIF" 
+                    style={{ width: '500px', height: '400px', cursor: 'pointer', padding: '20px'}} 
+                /> 
+                </div>
                 )}
             </div>
             ) : (

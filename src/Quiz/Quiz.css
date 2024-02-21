@@ -1,10 +1,11 @@
 .quiz-container {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: #f4d0d0;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: 0 auto;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -13,24 +14,28 @@
 }
 
 .question-text {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 10px;
     color: #c91f37;
+    font-family: "Lobster Two", sans-serif;
 }
 
 .options-container {
+    font-family: "Lobster Two", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .option-button {
-    background-color: #c91f37;
-    color: #fff;
+    font-family: "Lobster Two", sans-serif;
+    background-color: #e04156;
+    /* background-color: #c91f37; */
+    color: #f4d0d0;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 20px;
+    font-size: 20px;
     margin-bottom: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -45,22 +50,24 @@
 }
 
 .next-button {
+    font-family: "Lobster Two", sans-serif;
     background-color: #c91f37;
-    color: #fff;
+    color: #f4d0d0;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 20px;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .next-button:hover {
-    background-color: #a6192f;
+    background-color: #a81228;
 }
 
 .result-container {
-    font-size: 24px;
+    font-family: "Lobster Two", sans-serif;
+    font-size: 34px;
     color: #c91f37;
 }
 
